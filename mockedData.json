@@ -1,130 +1,101 @@
 {
     
     "users": [
+        
         {
-            "name": "Luke",
+            "name": "Luke1",
             "role": 1,
-            "level": 8
+            "level": 2
         },
 
         {
-            "name": "Luke",
+            "name": "Roberson1",
             "role": 1,
-            "level": 8
+            "level": 10
         },
         
         {
-            "name": "Luke",
+            "name": "Edijanio1",
             "role": 1,
-            "level": 8
+            "level": 6
         },
         
         {
-            "name": "Luke",
+            "name": "Cleiton1",
             "role": 1,
-            "level": 8
+            "level": 3
+        },      
+        
+        {
+            "name": "Luke2",
+            "role": 2,
+            "level": 2
+        },
+
+        {
+            "name": "Roberson2",
+            "role": 2,
+            "level": 10
         },
         
         {
-            "name": "Luke",
-            "role": 1,
-            "level": 8
+            "name": "Edijanio2",
+            "role": 2,
+            "level": 6
         },
         
         {
-            "name": "Luke",
-            "role": 1,
-            "level": 8
+            "name": "Cleiton2",
+            "role": 2,
+            "level": 3
+        },      
+        
+        {
+            "name": "Luke3",
+            "role": 3,
+            "level": 2
+        },
+
+        {
+            "name": "Roberson3",
+            "role": 3,
+            "level": 10
         },
         
         {
-            "name": "Luke",
-            "role": 1,
-            "level": 8
+            "name": "Edijanio3",
+            "role": 3,
+            "level": 6
         },
         
         {
-            "name": "Luke",
-            "role": 1,
-            "level": 8
+            "name": "Cleiton3",
+            "role": 3,
+            "level": 3
+        },      
+        
+        {
+            "name": "Luke4",
+            "role": 4,
+            "level": 2
+        },
+
+        {
+            "name": "Roberson4",
+            "role": 4,
+            "level": 10
         },
         
         {
-            "name": "Luke",
-            "role": 1,
-            "level": 8
+            "name": "Edijanio4",
+            "role": 4,
+            "level": 6
         },
         
         {
-            "name": "Luke",
-            "role": 1,
-            "level": 8
-        },
-        
-        {
-            "name": "Luke",
-            "role": 1,
-            "level": 8
-        },
-        
-        {
-            "name": "Luke",
-            "role": 1,
-            "level": 8
-        },
-        
-        {
-            "name": "Luke",
-            "role": 1,
-            "level": 8
-        },
-        
-        {
-            "name": "Luke",
-            "role": 1,
-            "level": 8
-        },
-        
-        {
-            "name": "Luke",
-            "role": 1,
-            "level": 8
-        },
-        
-        {
-            "name": "Luke",
-            "role": 1,
-            "level": 8
-        },
-        
-        {
-            "name": "Luke",
-            "role": 1,
-            "level": 8
-        },
-        
-        {
-            "name": "Luke",
-            "role": 1,
-            "level": 8
-        },
-        
-        {
-            "name": "Luke",
-            "role": 1,
-            "level": 8
-        },
-        
-        {
-            "name": "Luke",
-            "role": 1,
-            "level": 8
-        },
-        
-        {
-            "name": "Luke",
-            "role": 1,
-            "level": 8
+            "name": "Cleiton4",
+            "role": 4,
+            "level": 3
         }
     ]
 }
