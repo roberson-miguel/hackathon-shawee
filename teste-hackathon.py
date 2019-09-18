@@ -1,3 +1,9 @@
+from participant import Participant
+
+participantsList = []
+
+name = input("Digite o seu nome: ")
+
 print("Considerando os seguintes papéis: ")
 print("1 - Desenvolvedor")
 print("2 - Negócios")
@@ -10,6 +16,7 @@ level = int(input("Numa escala de 0 a 10, qual o seu nível de conhecimento ness
 confirma = input("Papel: " + str(role) + " Nível: " + str(level) + ". Podemos confirmar sua inscrição ? (s/n)")
 
 if confirma == "S" or confirma == "s": 
+    participantsList.append(Participant(name, role, level))
     print("Inscrição confirmada com sucesso!")
 else: 
     print("Inscrição cancelada!")

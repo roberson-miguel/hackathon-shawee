@@ -1,4 +1,4 @@
-class Participants:
+class Participant:
     def __init__(self, name, role, level):
         self.name = name
         self.role = role
