@@ -1,5 +1,7 @@
 from participant import Participant
+from participantsService import ParticipantsService
 
+participantsService = ParticipantsService()
 participantsList = []
 registerAnother = 's'
 confirm = 'n'
@@ -24,14 +26,14 @@ def registerUser():
     if confirm == "S" or confirm == "s": 
         participantsList.append(Participant(name, role, level))
         print("Inscrição confirmada com sucesso!")
-        for participant in participantsList:
-            print(participant.name)
-       
+        print(participantsList)
+        registerAnother = input("Deseja registrar outro usuário? (s/n)")
     else: 
         print("Inscrição cancelada!")    
         registerAnother = input("Deseja registrar outro usuário? (s/n)")
-
+       
 def run():
+    participantsService.getMockedUsers(participantsList)
     while registerAnother == 's' or registerAnother == 'S':
         getUserData()
         registerUser()
