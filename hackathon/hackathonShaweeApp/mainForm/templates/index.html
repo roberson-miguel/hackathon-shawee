@@ -22,20 +22,19 @@
                         <input type="email" name="email" required>
                     </div>
 
-                    <div class="form-group">
-                        <label for="age">Idade: </label>
-                        <input type="number" name="age" required>
-                    </div>
-
                     <div class="form-group" >
                         <label for="specialization">Especialização: </label><br>
-                        <input type="radio"  name="specialization" value="Front-end" required> Front-end
-                        <input type="radio" name="specialization" value="Front-end"> Back-end
-                        <input type="radio" name="specialization" value="Front-end"> Negócios
-                        <input type="radio" name="specialization" value="Front-end"> Ux/Ui
+                        <input type="radio"  name="specialization" value="frontend" required> Front-end
+                        <input type="radio" name="specialization" value="backend"> Back-end
+                        <input type="radio" name="specialization" value="business"> Negócios
+                        <input type="radio" name="specialization" value="ux"> Ux/Ui
                     </div>
+
                     <div class="form-group">
-                        <textarea name="resumo"  id="resumo" cols="30" rows="5"></textarea>
+                        <label for="knowledge">Nível de conhecimento</label><br>
+                        <input type="radio" name="knowledge" value="basic"> Básico
+                        <input type="radio" name="knowledge" value="intermediary"> Intermediário
+                        <input type="radio" name="knowledge" value="advanced"> Avançado
                     </div>
 
                     <button type="submit" class="btn btn-primary">Enviar</button>
