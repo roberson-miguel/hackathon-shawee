@@ -9,31 +9,30 @@
 </head>
 <body>
         <form action="" method="POST">
+            {% csrf_token %}
             <fieldset>
                 <legend>Formulario</legend>
                 <div>
                     <div class="form-group">
-                        <label for="Nome">Nome:</label>
-                        <input type="text" name="Nome" required autofocus>
+                        <label for="name">Nome:</label>
+                        <input type="text" name="name" required autofocus>
                     </div>
                     <div class="form-group" >
                         <label for="email">Email: </label>
-
                         <input type="email" name="email" required>
-
                     </div>
 
                     <div class="form-group">
-                        <label for="idade">Idade: </label>
-                        <input type="number" name="idade" required>
+                        <label for="age">Idade: </label>
+                        <input type="number" name="age" required>
                     </div>
 
                     <div class="form-group" >
-                        <label for="especializacao">Especialização: </label><br>
-                        <input type="radio"  name="especializacao" value="Front-end" required> Front-end
-                        <input type="radio" name="especializacao" value="Front-end"> Back-end
-                        <input type="radio" name="especializacao" value="Front-end"> Negócios
-                        <input type="radio" name="especializacao" value="Front-end"> Ux/Ui
+                        <label for="specialization">Especialização: </label><br>
+                        <input type="radio"  name="specialization" value="Front-end" required> Front-end
+                        <input type="radio" name="specialization" value="Front-end"> Back-end
+                        <input type="radio" name="specialization" value="Front-end"> Negócios
+                        <input type="radio" name="specialization" value="Front-end"> Ux/Ui
                     </div>
                     <div class="form-group">
                         <textarea name="resumo"  id="resumo" cols="30" rows="5"></textarea>
