@@ -13,8 +13,8 @@ def index(request):
     if request.method == "POST":
         name = request.POST["name"]
         email = request.POST["email"]
-        age = request.POST["age"]
         specialization = request.POST["specialization"]
+        knowledge = request.POST["knowledge"]
         
         form = request.POST
         print(form)
@@ -22,11 +22,17 @@ def index(request):
         newParticipant = {
             "name" : name,
             "email" : email,
-            "age" : age,
-            "specialization" : specialization
+            "specialization" : specialization,
+            "knowledge" : knowledge
         }
         
         participantId = participantsCollection.insert_one(newParticipant).inserted_id
+
+        participantsList = participantsCollection.find({"specialization" : "Front-end"}).count()
+
+        print("oi")
+        print(participantsList)
+
 
         print(participantId)
 
