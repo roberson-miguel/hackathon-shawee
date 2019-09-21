@@ -28,6 +28,12 @@ def index(request):
         
         participantId = participantsCollection.insert_one(newParticipant).inserted_id
 
+        participantsList = participantsCollection.find({"specialization" : "Front-end"}).count()
+
+        print("oi")
+        print(participantsList)
+
+
         print(participantId)
 
         return redirect("/")
