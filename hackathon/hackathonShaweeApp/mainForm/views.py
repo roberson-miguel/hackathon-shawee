@@ -11,6 +11,8 @@ db = client['teste-shawee']
 
 participantsCollection = db['participants']
 
+groupCollection = db['group']
+
 # Create your views here.
 def index(request):
     if request.method == "POST":
@@ -106,10 +108,10 @@ def index(request):
             print(gp_average)
             return new_group
         
-        print("oi")
-        # print(participants_knowledge_mean)
-        # print(balance_group(group, group_average))
-        print(balance_group(average))
+        final_group = balance_group(average)
+
+        groupCollection.insert({"group" : final_group})
+
         return redirect("/")
 
 
