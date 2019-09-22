@@ -1,0 +1,7 @@
+Run
+
+> mongoimport --host <host_name> --username <user_name> --password <password> --db <database_name> --collection <collection_name> --file <input_file>
+
+Input file is mockedData.json's path
+
+Change your db name into hackathonShaweeApp/mainForm/views.py file, line 10
