@@ -12,6 +12,7 @@ participantsCollection = db['participants']
 def index(request):
     if request.method == "POST":
         name = request.POST["name"]
+        gender = request.POST["gender"]
         email = request.POST["email"]
         specialization = request.POST["specialization"]
         knowledge = request.POST["knowledge"]
@@ -22,6 +23,7 @@ def index(request):
         newParticipant = {
             "name" : name,
             "email" : email,
+            "gender" : gender,
             "specialization" : specialization,
             "knowledge" : knowledge
         }
