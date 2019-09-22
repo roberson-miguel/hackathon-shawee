@@ -61,11 +61,6 @@ def index(request):
         backend_list = get_participant(backend)
         business_list = get_participant(business)
         ux_list = get_participant(ux)                                       
-        
-        # frontend_knowledge_avg = mean(frontend)
-        # backend_knowledge_avg = mean(backend)
-        # business_knowledge_avg = mean(business)
-        # ux_knowledge_avg = mean(ux)
 
         # for f in frontend:
         #     print("bateu aqui")
@@ -76,17 +71,17 @@ def index(request):
 
         def get_group(group):
             if newParticipant['specialization'] == "frontend":
-                group = [newParticipant, backend_list[random.randint(0, len(backend_list))], business_list[random.randint(0, len(business_list))], ux_list[random.randint(0, len(ux_list))]]
+                group = [newParticipant, backend_list[random.randint(0, len(backend_list) - 1)], business_list[random.randint(0, len(business_list) - 1)], ux_list[random.randint(0, len(ux_list) - 1)]]
             elif newParticipant['specialization'] == "backend":
-                group = [frontend_list[random.randint(0, len(frontend_list))], newParticipant, business_list[random.randint(0, len(business_list))], ux_list[random.randint(0, len(ux_list))]]
+                group = [frontend_list[random.randint(0, len(frontend_list) - 1)], newParticipant, business_list[random.randint(0, len(business_list) - 1)], ux_list[random.randint(0, len(ux_list) - 1)]]
             elif newParticipant['specialization'] == "business":
-                group = [frontend_list[random.randint(0, len(frontend_list))], backend_list[random.randint(0, len(backend_list))], newParticipant, ux_list[random.randint(0, len(ux_list))]] 
+                group = [frontend_list[random.randint(0, len(frontend_list) - 1)], backend_list[random.randint(0, len(backend_list) - 1)], newParticipant, ux_list[random.randint(0, len(ux_list) - 1)]] 
             else:
-                group = [frontend_list[random.randint(0, len(frontend_list))], backend_list[random.randint(0, len(backend_list))], business_list[random.randint(0, len(business_list))], newParticipant]
+                group = [frontend_list[random.randint(0, len(frontend_list) - 1)], backend_list[random.randint(0, len(backend_list) - 1)], business_list[random.randint(0, len(business_list) - 1)], newParticipant]
             return group
 
-        average = 2
-        group_average = 0
+        # average = 2
+        # group_average = 0
 
         def avg(li):
             meanVar = 0
@@ -94,19 +89,27 @@ def index(request):
                 meanVar = meanVar + int(l['knowledge'])
             return meanVar / len(li) 
 
-        def balance_group(gp_average) :
+        frontend_knowledge_avg = avg(frontend_list)
+        backend_knowledge_avg = avg(backend_list)
+        business_knowledge_avg = avg(business_list)
+        ux_knowledge_avg = avg(ux_list)
+
+        average = (frontend_knowledge_avg + backend_knowledge_avg + business_knowledge_avg + ux_knowledge_avg) / 4
+
+
+        def balance_group(average) :
             new_group = []
-            while gp_average - gp_average < 0.25 and average - gp_average > 0.25: 
+            gp_average = 0
+            while (gp_average - average) < 0 or (gp_average - average) > 0.25: 
                 new_group = get_group(new_group)
-                print(new_group)
                 gp_average = avg(new_group)
-                print(gp_average)
+            print(gp_average)
             return new_group
         
         print("oi")
         # print(participants_knowledge_mean)
         # print(balance_group(group, group_average))
-        print(balance_group(group_average))
+        print(balance_group(average))
         return redirect("/")
 
 
